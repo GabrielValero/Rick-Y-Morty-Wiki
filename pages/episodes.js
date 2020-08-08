@@ -47,7 +47,7 @@ export default class extends React.Component {
 
 		const prev = page > 1 ? 
 		<div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-			<Link href={`/locations?page=${parseInt(page)-1}`}>
+			<Link href={`/episodes?page=${parseInt(page)-1}`}>
 				<a>
 					<div className="button number" style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
 						<a>{parseInt(page)-1}</a>
