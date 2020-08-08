@@ -9,7 +9,7 @@ import Link from 'next/link';
 function Locations ({page}){
 	const locations = gql`
 		{
-		  	locations{
+		  	locations(page:${page}){
 			    results{
 				    id
 				    name
