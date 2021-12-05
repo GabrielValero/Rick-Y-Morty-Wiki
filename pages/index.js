@@ -74,7 +74,7 @@ function Main(){
 		        <div className="characters">
 		        	<div className="padre">
 		        		{data.characters.results.map(character=>(
-							<div className="d-flex justify-content-center align-middle">
+							<div className="d-flex justify-content-center align-middle" key={character.id}>
 								<Card character={character} />
 							</div>
 						))}
@@ -91,7 +91,7 @@ function Main(){
 			    	</Link>
 		    	</div>
 		    	{data.locations.results.slice(3,6).map(location=>(
-		    		<Location location={location}/>
+		    		<Location location={location} key={location.id}/>
 		    		))}
 		    	<div className="text-center">
 		    		<Link href="/locations?page=1">
@@ -106,7 +106,7 @@ function Main(){
 			    	</Link>
 		    	</div>
 		    	{data.episodes.results.slice(0,3).map(episode=>(
-		    		<Episode episode={episode}/>
+		    		<Episode episode={episode} key={episode.id}/>
 		    		))}
 		    	<div className="text-center">
 		    		<Link href="/episodes?page=1">
